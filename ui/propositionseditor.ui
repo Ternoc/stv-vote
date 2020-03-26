@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PropositionsEditor</class>
+ <widget class="QWidget" name="PropositionsEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>927</width>
+    <height>656</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="candidateName"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addCandidate">
+           <property name="text">
+            <string>Add</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteCandidate">
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="submit">
+        <property name="text">
+         <string>Submit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="candidateList">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::MultiSelection</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>addCandidate</sender>
+   <signal>clicked()</signal>
+   <receiver>PropositionsEditor</receiver>
+   <slot>addCandidate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>candidateName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>PropositionsEditor</receiver>
+   <slot>addCandidate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteCandidate</sender>
+   <signal>clicked()</signal>
+   <receiver>PropositionsEditor</receiver>
+   <slot>deleteSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>596</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>385</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>submit</sender>
+   <signal>clicked()</signal>
+   <receiver>PropositionsEditor</receiver>
+   <slot>submitList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>630</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>511</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addCandidate()</slot>
+  <slot>deleteSelection()</slot>
+  <slot>submitList()</slot>
+ </slots>
+</ui>
