@@ -2,7 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++17
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -18,15 +18,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    ui/propositionseditor.cpp
+    ui/propositionseditor.cpp \
+    ui/voteeditor.cpp
 
 HEADERS += \
     mainwindow.h \
-    ui/propositionseditor.h
+    ui/propositionseditor.h \
+    ui/voteeditor.h
 
 FORMS += \
     mainwindow.ui \
-    ui/propositionseditor.ui
+    ui/propositionseditor.ui \
+    ui/voteeditor.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

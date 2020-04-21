@@ -5,10 +5,9 @@
 #include <vector>
 #include <string>
 
-PropositionsEditor::PropositionsEditor(MainWindow &mainWindow, QWidget *parent) :
+PropositionsEditor::PropositionsEditor(QWidget *parent) :
 	QWidget(parent),
-	ui_(new Ui::PropositionsEditor),
-	mainWindow_(mainWindow)
+	ui_(new Ui::PropositionsEditor)
 {
 	ui_->setupUi(this);
 }
@@ -16,6 +15,11 @@ PropositionsEditor::PropositionsEditor(MainWindow &mainWindow, QWidget *parent) 
 PropositionsEditor::~PropositionsEditor()
 {
 	delete ui_;
+}
+
+void PropositionsEditor::setMainWindow(MainWindow &mainWindow)
+{
+	mainWindow_ = mainWindow;
 }
 
 void PropositionsEditor::keyPressEvent(QKeyEvent *event)
@@ -47,5 +51,7 @@ void PropositionsEditor::submitList()
 	for (int i = 0; i < candidateList->count(); ++i){
 		candidates.emplace_back(candidateList->item(i)->text().toStdString());
 	}
-	mainWindow_.setCandidateList(candidates);
+	if(mainWindow_){
+		mainWindow_->get().setCandidateList(candidates);
+	}
 }

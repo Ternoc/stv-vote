@@ -6,14 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>977</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="PropositionsEditor" name="propositionEditor" native="true"/>
+   </item>
+   <item>
+    <widget class="VoteEditor" name="voteEditor" native="true"/>
+   </item>
+  </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PropositionsEditor</class>
+   <extends>QWidget</extends>
+   <header>ui/propositionseditor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VoteEditor</class>
+   <extends>QWidget</extends>
+   <header>ui/voteeditor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

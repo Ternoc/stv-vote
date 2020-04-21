@@ -2,6 +2,8 @@
 #define PROPOSITIONSEDITOR_H
 
 #include <QWidget>
+#include <optional>
+#include <functional>
 
 namespace Ui {
 class PropositionsEditor;
@@ -14,8 +16,9 @@ class PropositionsEditor : public QWidget
 	Q_OBJECT
 	
 public:
-	explicit PropositionsEditor(MainWindow& mainWindow,QWidget *parent = nullptr);
+	explicit PropositionsEditor(QWidget *parent = nullptr);
 	~PropositionsEditor();
+	void setMainWindow(MainWindow& mainWindow);
 	
 protected:
    virtual void keyPressEvent(QKeyEvent *event) override;
@@ -27,7 +30,7 @@ private slots:
 	
 private:
 	Ui::PropositionsEditor *ui_;
-	MainWindow& mainWindow_;
+	std::optional<std::reference_wrapper<MainWindow>> mainWindow_; //référence optionnel
 };
 
 #endif // PROPOSITIONSEDITOR_H

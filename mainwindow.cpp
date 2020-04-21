@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
 	, ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+	ui->propositionEditor->setMainWindow(*this);
 }
 
 MainWindow::~MainWindow()
@@ -15,6 +16,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::setCandidateList(std::vector<std::string> candidateList)
 {
-	
+	ui->voteEditor->setCandidateList(candidateList);
 }
 
