@@ -3,10 +3,14 @@
 
 #include <QWidget>
 #include <vector>
+#include <optional>
+#include <functional>
 
 namespace Ui {
-class Vote;
+class VoteEditor;
 }
+
+class MainWindow;
 
 class VoteEditor : public QWidget
 {
@@ -15,10 +19,21 @@ class VoteEditor : public QWidget
 public:
 	explicit VoteEditor(QWidget *parent = nullptr);
 	~VoteEditor();
-	void setCandidateList(std::vector<std::string> candidateList);
+	void setInitialCandidateList(std::vector<std::string> candidateList);
+	void setMainWindow(MainWindow& mainWindow);
+	
+public slots:
+	void submit();
+	void electorNameChanged();
 	
 private:
-	Ui::Vote *ui;
+	void reset();
+	void setCandidateList(std::vector<std::string> candidateList);	
+	
+private:
+	Ui::VoteEditor *ui;
+	std::optional<std::reference_wrapper<MainWindow>> mainWindow_;
+	std::vector<std::string> initialCandidateList_;
 };
 
 #endif // VOTE_H

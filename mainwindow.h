@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <vector>
 #include <string>
+#include "model/voteresult.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,6 +18,7 @@ public:
 	MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
 	void setCandidateList(std::vector<std::string> candidateList);
+	void addVoteResult(VoteResult voteResult);
 	
 private:
 	Ui::MainWindow *ui;

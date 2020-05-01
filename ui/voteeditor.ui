@@ -25,7 +25,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="electorName"/>
       </item>
      </layout>
     </widget>
@@ -48,7 +48,10 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="submitButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Valider</string>
         </property>
@@ -60,5 +63,42 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>submitButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VoteEditor</receiver>
+   <slot>submit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>426</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>electorName</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>VoteEditor</receiver>
+   <slot>electorNameChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>submit()</slot>
+  <slot>electorNameChanged()</slot>
+ </slots>
 </ui>

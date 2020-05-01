@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    model/voteresult.cpp \
     ui/propositionseditor.cpp \
     ui/voteeditor.cpp
 
 HEADERS += \
     mainwindow.h \
+    model/voteresult.h \
     ui/propositionseditor.h \
     ui/voteeditor.h
 
