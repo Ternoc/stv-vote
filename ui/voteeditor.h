@@ -21,10 +21,13 @@ public:
 	~VoteEditor();
 	void setInitialCandidateList(std::vector<std::string> candidateList);
 	void setMainWindow(MainWindow& mainWindow);
+	void addElectorName(std::string name);
 	
 public slots:
 	void submit();
+	void cancel();
 	void electorNameChanged();
+	void showResults();
 	
 private:
 	void reset();

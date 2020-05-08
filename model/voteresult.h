@@ -5,7 +5,7 @@
 
 struct VoteResult
 {
-	std::vector<std::string> orderedCandidate;
+	std::vector<std::string> orderedCandidates;
 	std::string electorName;
 };
 

@@ -31,10 +31,19 @@
     </widget>
    </item>
    <item>
-    <widget class="QListWidget" name="candidateList">
-     <property name="dragDropMode">
-      <enum>QAbstractItemView::InternalMove</enum>
-     </property>
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QListWidget" name="electorList"/>
+      </item>
+      <item>
+       <widget class="QListWidget" name="candidateList">
+        <property name="dragDropMode">
+         <enum>QAbstractItemView::InternalMove</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
@@ -60,6 +69,13 @@
      </layout>
     </widget>
    </item>
+   <item>
+    <widget class="QPushButton" name="resultButton">
+     <property name="text">
+      <string>Afficher les résultats</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
@@ -72,7 +88,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>493</x>
-     <y>488</y>
+     <y>459</y>
     </hint>
     <hint type="destinationlabel">
      <x>1</x>
@@ -96,9 +112,43 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VoteEditor</receiver>
+   <slot>cancel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>453</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resultButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VoteEditor</receiver>
+   <slot>showResults()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>490</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>submit()</slot>
   <slot>electorNameChanged()</slot>
+  <slot>cancel()</slot>
+  <slot>showResults()</slot>
  </slots>
 </ui>

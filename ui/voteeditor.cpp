@@ -34,6 +34,11 @@ void VoteEditor::setMainWindow(MainWindow &mainWindow)
 	mainWindow_ = mainWindow;	
 }
 
+void VoteEditor::addElectorName(std::string name)
+{
+	ui->electorList->addItem(name.c_str());
+}
+
 void VoteEditor::reset()
 {
 	ui->electorName->clear();
@@ -58,9 +63,21 @@ void VoteEditor::submit()
 	reset();
 }
 
+void VoteEditor::cancel()
+{
+	reset();
+}
+
 void VoteEditor::electorNameChanged()
 {
 	ui->submitButton->setEnabled(!ui->electorName->text().isEmpty());
+}
+
+void VoteEditor::showResults()
+{
+	if(mainWindow_){
+		mainWindow_->get().showResults();
+	}
 }
 
 

@@ -20,17 +20,20 @@ SOURCES += \
     mainwindow.cpp \
     model/voteresult.cpp \
     ui/propositionseditor.cpp \
+    ui/resultsviewer.cpp \
     ui/voteeditor.cpp
 
 HEADERS += \
     mainwindow.h \
     model/voteresult.h \
     ui/propositionseditor.h \
+    ui/resultsviewer.h \
     ui/voteeditor.h
 
 FORMS += \
     mainwindow.ui \
     ui/propositionseditor.ui \
+    ui/resultsviewer.ui \
     ui/voteeditor.ui
 
 # Default rules for deployment.

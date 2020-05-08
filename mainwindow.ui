@@ -20,6 +20,9 @@
    <item>
     <widget class="VoteEditor" name="voteEditor" native="true"/>
    </item>
+   <item>
+    <widget class="ResultsViewer" name="resultsViewer" native="true"/>
+   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -33,6 +36,12 @@
    <class>VoteEditor</class>
    <extends>QWidget</extends>
    <header>ui/voteeditor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ResultsViewer</class>
+   <extends>QWidget</extends>
+   <header>ui/resultsviewer.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

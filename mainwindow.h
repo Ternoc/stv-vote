@@ -19,6 +19,7 @@ public:
 	~MainWindow();
 	void setCandidateList(std::vector<std::string> candidateList);
 	void addVoteResult(VoteResult voteResult);
+	void showResults();
 	
 private:
 	Ui::MainWindow *ui;
