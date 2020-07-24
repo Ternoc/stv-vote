@@ -39,9 +39,6 @@ void ResultsViewer::setInitialCandidates(std::vector<std::string> candidates)
 
 void ResultsViewer::computeResults()
 {
-	/*	
-	ui->resultsTable->setItem(0,0, new QTableWidgetItem("5"));
-	delete ui->resultsTable->item(0,0); */
 	std::unordered_map<std::string, int> votes;
 	for (auto candidate : initialCandidates_) {
 		votes[candidate] = 0;
