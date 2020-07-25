@@ -30,6 +30,10 @@ public slots:
 	void showResults();
 	void deleteCandidate();
 	
+protected:
+   virtual void keyPressEvent(QKeyEvent *event) override;
+	
+	
 private:
 	void reset();
 	void setCandidateList(std::vector<std::string> candidateList);	

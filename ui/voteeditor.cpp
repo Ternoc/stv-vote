@@ -1,3 +1,4 @@
+#include <QKeyEvent>
 #include "voteeditor.h"
 #include "ui_voteeditor.h"
 #include "mainwindow.h"
@@ -85,6 +86,14 @@ void VoteEditor::deleteCandidate()
 	auto selectedCandidates = ui->candidateList->selectedItems();
 	for (auto candidate : selectedCandidates){
 		delete candidate;
+	}
+	
+}
+
+void VoteEditor::keyPressEvent(QKeyEvent *event)
+{
+	if (event->key() == Qt::Key_Delete) { 
+		deleteCandidate();
 	}
 	
 }
