@@ -66,6 +66,13 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -87,8 +94,8 @@
    <slot>submit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>493</x>
-     <y>459</y>
+     <x>424</x>
+     <y>467</y>
     </hint>
     <hint type="destinationlabel">
      <x>1</x>
@@ -144,11 +151,28 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>deleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VoteEditor</receiver>
+   <slot>deleteCandidate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>457</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>submit()</slot>
   <slot>electorNameChanged()</slot>
   <slot>cancel()</slot>
   <slot>showResults()</slot>
+  <slot>deleteCandidate()</slot>
  </slots>
 </ui>

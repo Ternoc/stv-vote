@@ -80,4 +80,13 @@ void VoteEditor::showResults()
 	}
 }
 
+void VoteEditor::deleteCandidate()
+{
+	auto selectedCandidates = ui->candidateList->selectedItems();
+	for (auto candidate : selectedCandidates){
+		delete candidate;
+	}
+	
+}
+
 

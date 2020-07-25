@@ -28,6 +28,7 @@ public slots:
 	void cancel();
 	void electorNameChanged();
 	void showResults();
+	void deleteCandidate();
 	
 private:
 	void reset();
