@@ -1,0 +1,1 @@
+Ce programme est un prototype pour un isoloir électronique pour des votes utilisant la méthode STV (Scrutin à vote unique transférable). Il a été créé et pensé à l'origine pour être utilisé lors d'assemblée générale d'associations. 
